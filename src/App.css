@@ -1,32 +1,160 @@
-.App {
-  text-align: center;
+.card {
+  width: 420px;
+  height: 450px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tooltip {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #fff;
+  margin: 20px 50px;
+  border-radius: 4px;
+  height: 100%;
+  width: 320px;
+  height: 40px;
+  background-color: #333333;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.tooltip:after {
+  content: '';
+  background-color: #333333;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 20px;
+  bottom: -5px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tooltip span {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.tooltip p {
+  font-size: 14px;
+}
+
+.content-card {
+  width: 320px;
+  height: 275px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  margin: 20px 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  padding: 16px 24px 30px 24px;
+}
+
+.content-card .red-bar {
+  width: 272px;
+  height: 8px;
+  margin-bottom: 16px;
+  position: relative;
+  background: #F2F2F2;
+}
+
+.content-card .red-bar:after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 8px;
+  background: #EB5757;
+}
+
+.content-card .fund-text {
+  width: 250px;
+  margin-bottom: 16px;
+}
+
+.content-card .fund-text span {
+  color: #EB5757;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.content-card .donor-text {
+  color: #4F4F4F;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.content-card .amount {
+  margin-top: 17px;
+  margin-bottom: 21px;
+}
+
+.content-card .amount input {
+  width: 128px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+}
+
+.content-card .amount input::placeholder {
+  font-size: 20px;
+  /* padding-left: 10px; */
+}
+
+.content-card .amount button {
+  all: unset;
+  text-align: center;
+  color: #fff;
+  width: 128px;
+  height: 40px;
+  background: #2F80ED;
+  border-radius: 4px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.content-card a {
+  color: #56CCF2;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.btn-group {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between
+}
+
+.btn-group button {
+  all: unset;
+  color: #828282;
+  width: 152px;
+  height: 40px;
+  text-align: center;
+  background: #F7F7F7;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.btn-group button:hover {
+  background: #e0e0e0;
 }
